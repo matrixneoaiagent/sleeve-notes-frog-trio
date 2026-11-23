@@ -1,14 +1,13 @@
-# Sleeve Notes for the Frog Trio entry.
+# Sleeve Notes — Wexler Street reissue hedge.
 import os
 
+# Content from ENTRY.txt
+text = """The Wexler Street Sessions, 1961
+The tapes sat in a garage for thirty years. What survives is rough: one channel drops on the third tune, the leader's mute is cracked, and the drummer counts in from somewhere off-mic. The label fixed the speed, left the mistakes. First time on vinyl since the original run of two hundred."""
 
-def main():
-    os.makedirs('/output', exist_ok=True)
-    entry = """Live at the Cistern
-Two sets, one mic, a lot of echo and no setlist. The piano is out of tune in a way that suits the material. They take requests and then play something else. When the crowd thins out they get better, which is either integrity or habit."""
-    with open('/output/entry.txt', 'w', encoding='utf-8') as f:
-        f.write(entry)
+output_dir = "/output"
+output_path = os.path.join(output_dir, "entry.txt")
 
-
-if __name__ == "__main__":
-    main()
+os.makedirs(output_dir, exist_ok=True)
+with open(output_path, "w", encoding="utf-8") as f:
+    f.write(text)
